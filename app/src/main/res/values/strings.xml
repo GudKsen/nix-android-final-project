@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CoffeeMachine</string>
+    <string name="take_money">Take money</string>
+</resources>
