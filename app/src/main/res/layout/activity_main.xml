@@ -53,7 +53,7 @@
         android:textColorHint="#d8cbc4"
         android:importantForAutofill="no" />
 
-    <EditText
+<EditText
         android:id="@+id/coffee_beans_fill"
         android:layout_width="200dp"
         android:layout_height="50dp"
@@ -95,6 +95,32 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/button_espresso"
+        android:layout_width="200dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="0dp"
+        android:layout_height="wrap_content"
+        android:text="ESPRESSO"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+        android:id="@+id/button_latte"
+        android:layout_width="140dp"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+
+        android:text="LATTE" />
+
+    <Button
+        android:id="@+id/button_cappuccino"
+        android:layout_width="200dp"
+        android:layout_marginTop="200dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:text="CAPPUCCINO" />
 
 
     <Button
