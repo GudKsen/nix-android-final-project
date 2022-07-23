@@ -1,4 +1,5 @@
-package com.example.coffeemachine
+package com.example.coffeemachine.ui.views
+
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,12 +7,26 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.coffeemachine.R
+import com.example.coffeemachine.ui.adapters.Contract
+import com.example.coffeemachine.core.entities.OptionForBuyingCoffee
+import com.example.coffeemachine.core.entities.Resources
+import com.example.coffeemachine.core.entities.Response
+import com.example.coffeemachine.core.interactors.BuyCoffeeInteractor
+import com.example.coffeemachine.core.interactors.FillResourcesInteractor
+import com.example.coffeemachine.core.interactors.ShowInfoInteractor
+import com.example.coffeemachine.core.interactors.TakeMoneyInteractor
+import com.example.coffeemachine.data.repositories.FakeActionRepositoryImplementation
+import com.example.coffeemachine.ui.adapters.Presenter
 
+class MainActivity : AppCompatActivity(), Contract.View {
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var controller: Controller
-    private lateinit var model: Model
+    private val presenter = Presenter(
+        BuyCoffeeInteractor(FakeActionRepositoryImplementation()),
+        TakeMoneyInteractor(FakeActionRepositoryImplementation()),
+        FillResourcesInteractor(FakeActionRepositoryImplementation()),
+        ShowInfoInteractor(FakeActionRepositoryImplementation())
+    )
 
     private var waterFill: EditText? = null
     private var milkFill: EditText? = null
@@ -19,7 +34,6 @@ class MainActivity : AppCompatActivity() {
     private var cupsFill: EditText? = null
     private var buttonFill: Button? = null
     private var buttonTakeMoney: Button? = null
-    private var infoField: TextView? = null
     private var buttonEspresso: Button? = null
     private var buttonLatte: Button? = null
     private var buttonCappuccino: Button? = null
@@ -28,10 +42,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        model = Model()
-        controller = Controller(model)
-        controller.attachView(MainActivity())
+        presenter.attach(this)
 
         waterFill = findViewById(R.id.water_fill)
         milkFill = findViewById(R.id.milk_fill)
@@ -41,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         buttonFill = findViewById(R.id.button_fill)
         buttonTakeMoney = findViewById(R.id.button_takeMoney)
 
-        infoField = findViewById(R.id.infoField)
+
 
         buttonEspresso = findViewById(R.id.button_espresso)
         buttonLatte = findViewById(R.id.button_latte)
@@ -77,31 +88,36 @@ class MainActivity : AppCompatActivity() {
                     coffeeBeans = coffeeBeansStr.toInt(),
                     cups = cupsStr.toInt()
                 )
-                infoField?.text = controller.fillResources(res)
+                presenter.fillResources(res)
             }
         }
 
         buttonTakeMoney!!.setOnClickListener {
-            infoField?.text = controller.takeMoney()
+            presenter.takeMoney()
         }
 
         buttonEspresso?.setOnClickListener {
             val obj = OptionForBuyingCoffee("1")
-            infoField?.text = controller.buyCoffee(obj)
+            presenter.buyCoffee(obj)
         }
 
         buttonLatte?.setOnClickListener {
             val obj = OptionForBuyingCoffee("2")
-            infoField?.text = controller.buyCoffee(obj)
+            presenter.buyCoffee(obj)
         }
 
         buttonCappuccino?.setOnClickListener {
             val obj = OptionForBuyingCoffee("3")
-            infoField?.text = controller.buyCoffee(obj)
+            presenter.buyCoffee(obj)
         }
 
         buttonInfo?.setOnClickListener {
-            infoField?.text = controller.remaining()
+            presenter.remaining()
         }
+    }
+
+    override fun showData(response: Response) {
+        val textView = findViewById<TextView>(R.id.infoField)
+        textView.text = response.message
     }
 }

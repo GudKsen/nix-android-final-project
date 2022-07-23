@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#6a4a3a"
     android:visibility="visible"
-    tools:context=".MainActivity">
+    tools:context=".ui.views.MainActivity">
 
     <Button
         android:id="@+id/button_takeMoney"
@@ -96,32 +96,6 @@
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
 
-    <Button
-        android:id="@+id/button_espresso"
-        android:layout_width="200dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="0dp"
-        android:layout_height="wrap_content"
-        android:text="ESPRESSO"
-        android:layout_alignParentLeft="true"/>
-
-    <Button
-        android:id="@+id/button_latte"
-        android:layout_width="140dp"
-        android:layout_marginTop="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content"
-
-        android:text="LATTE" />
-
-    <Button
-        android:id="@+id/button_cappuccino"
-        android:layout_width="200dp"
-        android:layout_marginTop="200dp"
-        android:layout_alignParentRight="true"
-        android:layout_height="wrap_content"
-        android:text="CAPPUCCINO" />
-
 
     <Button
         android:id="@+id/button_espresso"
@@ -138,7 +112,6 @@
         android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
-
         android:text="@string/latte" />
 
     <Button
@@ -157,3 +130,4 @@
         android:layout_marginHorizontal="200dp"
         android:layout_marginTop="950dp"/>
 </RelativeLayout>
+
