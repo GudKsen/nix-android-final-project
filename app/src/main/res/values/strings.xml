@@ -11,4 +11,10 @@
     <string name="cappuccino">CAPPUCCINO</string>
     <string name="hello">Hello</string>
     <string name="information">Information</string>
+    <string name="dropdown_menu">Currency</string>
+    <string-array name="dropdown_options">
+        <item>USD</item>
+        <item>UAH</item>
+        <item>JPY</item>
+    </string-array>
 </resources>
