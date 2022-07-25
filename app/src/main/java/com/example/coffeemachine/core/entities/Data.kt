@@ -6,8 +6,8 @@ enum class CoffeeRecipe(val water: Int, val milk:Int, val coffeeBeans:Int, val p
     CAPPUCCINO(200, 100, 12, 6)
 }
 
-data class Resources (var water: Int = 0,
-                      var milk: Int = 0,
-                      var coffeeBeans: Int = 0,
-                      var cups: Int = 0,
-                      var money: Int = 0)
+data class Resources (val water: Int = 0,
+                      val milk: Int = 0,
+                      val coffeeBeans: Int = 0,
+                      val cups: Int = 0,
+                      val money: Int = 0)

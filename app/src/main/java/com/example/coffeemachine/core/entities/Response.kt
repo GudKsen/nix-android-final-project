@@ -1,4 +1,4 @@
 package com.example.coffeemachine.core.entities
 
-data class Response(var message: String)
-data class OptionForBuyingCoffee(var option: String = "")
+data class Response(val message: String)
+data class OptionForBuyingCoffee(val option: String = "")
