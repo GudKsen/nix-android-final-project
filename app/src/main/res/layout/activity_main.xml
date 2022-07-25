@@ -61,7 +61,7 @@
         android:layout_below="@+id/milk_fill"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="@string/coffee_beans"
+        android:hint="Coffee_beans"
         android:textColorHint="#d8cbc4"
         android:importantForAutofill="no" />
 
@@ -73,7 +73,7 @@
         android:layout_below="@+id/coffee_beans_fill"
         android:ems="10"
         android:inputType="number"
-        android:hint="@string/cups"
+        android:hint="Cups"
         android:textColorHint="#d8cbc4"
         android:importantForAutofill="no" />
 
@@ -84,7 +84,7 @@
         android:layout_below="@+id/cups_fill"
         android:layout_marginHorizontal="180dp"
         android:layout_marginTop="50dp"
-        android:text="@string/fill"
+        android:text="FILL"
         android:textColor="#d8cbc4"
         />
 
@@ -95,7 +95,6 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
-
 
     <Button
         android:id="@+id/button_espresso"
@@ -126,7 +125,7 @@
         android:id="@+id/button_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/information"
+        android:text="Information"
         android:layout_marginHorizontal="200dp"
         android:layout_marginTop="950dp"/>
 </RelativeLayout>
