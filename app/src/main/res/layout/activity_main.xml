@@ -100,10 +100,11 @@
         android:id="@+id/button_espresso"
         android:layout_width="200dp"
         android:layout_marginTop="200dp"
-        android:layout_marginStart="0dp"
+
+        android:layout_marginLeft="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/espresso"
-        android:layout_alignParentStart="true"/>
+        android:text="ESPRESSO"
+        android:layout_alignParentLeft="true"/>
 
     <Button
         android:id="@+id/button_latte"
@@ -111,22 +112,62 @@
         android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
-        android:text="@string/latte" />
+        android:text="LATTE" />
 
     <Button
         android:id="@+id/button_cappuccino"
         android:layout_width="200dp"
         android:layout_marginTop="200dp"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_height="wrap_content"
-        android:text="@string/cappuccino" />
+        android:text="CAPPUCCINO" />
 
     <Button
         android:id="@+id/button_info"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
-        android:text="Information"
+        android:text="@string/information"
         android:layout_marginHorizontal="200dp"
         android:layout_marginTop="950dp"/>
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/dropdown_menu"
+        android:contextClickable="true"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:id="@+id/espresso_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="70dp"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/latte_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="250dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/cappuccino_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="471dp"
+        android:textSize="16sp"/>
+
+
 </RelativeLayout>
 

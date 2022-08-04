@@ -4,10 +4,10 @@
     <string name="espresso">ESPRESSO</string>
     <string name="fill">FILL</string>
     <string name="information">Information</string>
-    <string name="cappuccino">CAPPUCCINO</string>
-    <string name="latte">LATTE</string>
-    <string name="cups">Cups</string>
-    <string name="coffee_beans">Coffee_beans</string>
-    <string name="milk">Milk</string>
-    <string name="water">Water</string>
+    <string name="dropdown_menu">Currency</string>
+    <string-array name="dropdown_options">
+        <item>USD</item>
+        <item>UAH</item>
+        <item>JPY</item>
+    </string-array>
 </resources>
