@@ -1,15 +1,8 @@
 <resources>
     <string name="app_name">CoffeeMachine</string>
     <string name="take_money">Take money</string>
-    <string name="water">Water</string>
-    <string name="coffee_beans">Coffee beans</string>
-    <string name="cups">Cups</string>
-    <string name="fill">Fill</string>
-    <string name="milk">Milk</string>
     <string name="espresso">ESPRESSO</string>
-    <string name="latte">LATTE</string>
-    <string name="cappuccino">CAPPUCCINO</string>
-    <string name="hello">Hello</string>
+    <string name="fill">FILL</string>
     <string name="information">Information</string>
     <string name="dropdown_menu">Currency</string>
     <string-array name="dropdown_options">

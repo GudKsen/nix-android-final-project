@@ -1,5 +1,6 @@
 package com.example.coffeemachine.ui.adapters
 
+
 import com.example.coffeemachine.core.entities.*
 import com.example.coffeemachine.core.interactors.*
 import kotlinx.coroutines.*
@@ -21,6 +22,7 @@ class Presenter(
     private val job = Job()
     override val coroutineContext: CoroutineContext = job + Dispatchers.Default
 
+
     override fun attach(view: Contract.View) {
         this.view = view
     }
@@ -30,12 +32,14 @@ class Presenter(
     }
 
     fun buyCoffee(option: OptionForBuyingCoffee) {
+
         val res = modelBuy.call(option)
         if (res != null) {
             savePayment(Payment(res.price, res.currency, res.currency))
             loadPayment(OrderCoffeeData(res.price, res.currency))
             view?.showData(Response(res.message))
         }
+
     }
 
     fun fillResources(res: Resources) {
@@ -50,6 +54,7 @@ class Presenter(
     fun remaining() {
         view?.showData(modelShowInfo.call())
     }
+
 
      fun getPrice(pay: OptionForBuyingCoffee, curr: String) {
         launch {
@@ -90,5 +95,6 @@ class Presenter(
             }
         }
     }
+
 
 }
